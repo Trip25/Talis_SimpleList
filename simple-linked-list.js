@@ -4,41 +4,43 @@
 //
 
 export class Element {
-  constructor() {
-   
+  constructor(number) {
+    // _property is setter method to set the value of a property of an object.
+   this._number = number;
+   this._next = null;
   }
 
   get value() {
-    throw new Error('Remove this statement and implement this function');
+    return this._number;
   }
 
   get next() {
-    throw new Error('Remove this statement and implement this function');
+    return this._next;
   }
 }
 
-export class List {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
-  }
+// export class List {
+//   constructor() {
+//     throw new Error('Remove this statement and implement this function');
+//   }
 
-  add(nextValue) {
-    throw new Error('Remove this statement and implement this function');
-  }
+//   add(nextValue) {
+//     throw new Error('Remove this statement and implement this function');
+//   }
 
-  get length() {
-    throw new Error('Remove this statement and implement this function');
-  }
+//   get length() {
+//     throw new Error('Remove this statement and implement this function');
+//   }
 
-  get head() {
-    throw new Error('Remove this statement and implement this function');
-  }
+//   get head() {
+//     throw new Error('Remove this statement and implement this function');
+//   }
 
-  toArray() {
-    throw new Error('Remove this statement and implement this function');
-  }
+//   toArray() {
+//     throw new Error('Remove this statement and implement this function');
+//   }
 
-  reverse() {
-    throw new Error('Remove this statement and implement this function');
-  }
-}
+//   reverse() {
+//     throw new Error('Remove this statement and implement this function');
+//   }
+// }

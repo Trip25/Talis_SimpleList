@@ -1,7 +1,7 @@
 # Simple Linked List
 
 Welcome to Simple Linked List on Exercism's JavaScript Track.
-If you need help running the tests or submitting your code, check out `HELP.md`.
+If you need help running the tests or submitting your code, check out `HELP.md`.✅
 
 ## Instructions
 
