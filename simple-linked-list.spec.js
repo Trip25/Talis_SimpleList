@@ -18,30 +18,30 @@ describe('Element class', () => {
 });
 
 describe('List class', () => {
-  xtest('has constructor', () => {
+  test('has constructor', () => {
     const list = new List();
     expect(list).toBeDefined();
   });
 
-  xtest('new lists should have length 0', () => {
+  test('new lists should have length 0', () => {
     const list = new List();
     expect(list.length).toEqual(0);
   });
 
-  xtest('can add a element', () => {
+  test('can add a element', () => {
     const list = new List();
     const element = new Element(1);
     expect(() => list.add(element)).not.toThrow();
   });
 
-  xtest('adding a element increments length', () => {
+  test('adding a element increments length', () => {
     const list = new List();
     const element = new Element(1);
     list.add(element);
     expect(list.length).toEqual(1);
   });
 
-  xtest('adding two elements increments twice', () => {
+  test('adding two elements increments twice', () => {
     const list = new List();
     const element1 = new Element(1);
     const element2 = new Element(3);
@@ -50,19 +50,19 @@ describe('List class', () => {
     expect(list.length).toEqual(2);
   });
 
-  xtest('new Lists have a null head element', () => {
+  test('new Lists have a null head element', () => {
     const list = new List();
     expect(list.head).toEqual(null);
   });
 
-  xtest('adding an Element to an empty list sets the head Element', () => {
+  test('adding an Element to an empty list sets the head Element', () => {
     const list = new List();
     const element = new Element(1);
     list.add(element);
     expect(list.head.value).toEqual(1);
   });
 
-  xtest('adding a second Element updates the head Element', () => {
+  test('adding a second Element updates the head Element', () => {
     const list = new List();
     const element1 = new Element(1);
     const element2 = new Element(3);
@@ -71,7 +71,7 @@ describe('List class', () => {
     expect(list.head.value).toEqual(3);
   });
 
-  xtest('can get the next Element from the head', () => {
+  test('can get the next Element from the head', () => {
     const list = new List();
     const element1 = new Element(1);
     const element2 = new Element(3);
@@ -80,7 +80,7 @@ describe('List class', () => {
     expect(list.head.next.value).toEqual(1);
   });
 
-  xtest('can be initialized with an array', () => {
+  test('can be initialized with an array', () => {
     const list = new List([1, 2, 3]);
     expect(list.length).toEqual(3);
     expect(list.head.value).toEqual(3);

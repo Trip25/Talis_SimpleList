@@ -19,28 +19,29 @@ export class Element {
   }
 }
 
-// export class List {
-//   constructor() {
-//     throw new Error('Remove this statement and implement this function');
-//   }
+export class List {
+  constructor() {
+    this._length = 0;
+    this._head = null;
+  }
 
-//   add(nextValue) {
-//     throw new Error('Remove this statement and implement this function');
-//   }
+  add(nextValue) {
+    throw new Error('Remove this statement and implement this function');
+  }
 
-//   get length() {
-//     throw new Error('Remove this statement and implement this function');
-//   }
+  get length() {
+    throw new Error('Remove this statement and implement this function');
+  }
 
-//   get head() {
-//     throw new Error('Remove this statement and implement this function');
-//   }
+  get head() {
+    throw new Error('Remove this statement and implement this function');
+  }
 
-//   toArray() {
-//     throw new Error('Remove this statement and implement this function');
-//   }
+  toArray() {
+    throw new Error('Remove this statement and implement this function');
+  }
 
-//   reverse() {
-//     throw new Error('Remove this statement and implement this function');
-//   }
-// }
+  reverse() {
+    throw new Error('Remove this statement and implement this function');
+  }
+}
