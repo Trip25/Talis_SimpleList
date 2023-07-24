@@ -92,38 +92,38 @@ describe('Lists with multiple elements', () => {
   beforeEach(() => {
     list = new List([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
   });
-  xtest('with correct length', () => {
+  test('with correct length', () => {
     expect(list.length).toEqual(10);
   });
-  xtest('with correct head value', () => {
+  test('with correct head value', () => {
     expect(list.head.value).toEqual(10);
   });
-  xtest('can traverse the list', () => {
+  test('can traverse the list', () => {
     expect(list.head.next.next.next.value).toEqual(7);
   });
-  xtest('can convert to an array', () => {
+  test('can convert to an array', () => {
     const oneList = new List([1]);
     expect(oneList.toArray()).toEqual([1]);
   });
-  xtest('head of list is final element from input array', () => {
+  test('head of list is final element from input array', () => {
     const twoList = new List([1, 2]);
     expect(twoList.head.value).toEqual(2);
   });
-  xtest('can convert longer list to an array', () => {
+  test('can convert longer list to an array', () => {
     expect(list.toArray()).toEqual([10, 9, 8, 7, 6, 5, 4, 3, 2, 1]);
   });
-  xtest('can be reversed', () => {
+  test('can be reversed', () => {
     const twoList = new List([1, 2]);
     expect(twoList.reverse().toArray()).toEqual([1, 2]);
   });
-  xtest('can be reversed when it has more elements', () => {
+  test('can be reversed when it has more elements', () => {
     const threeList = new List([1, 2, 3]);
     expect(threeList.reverse().toArray()).toEqual([1, 2, 3]);
   });
-  xtest('can reverse with many elements', () => {
+  test('can reverse with many elements', () => {
     expect(list.reverse().toArray()).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
   });
-  xtest('can reverse a reversal', () => {
+  test('can reverse a reversal', () => {
     expect(list.reverse().reverse().toArray()).toEqual([
       10, 9, 8, 7, 6, 5, 4, 3, 2, 1,
     ]);

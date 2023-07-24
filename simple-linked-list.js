@@ -1,47 +1,77 @@
-//
-// This is only a SKELETON file for the 'Simple Linked List' exercise. It's been provided as a
-// convenience to get you started writing code faster.
-//
-
 export class Element {
-  constructor(number) {
-    // _property is setter method to set the value of a property of an object.
-   this._number = number;
-   this._next = null;
+  constructor(value) {
+    this._value = value;
+    this._next = null;
   }
 
   get value() {
-    return this._number;
+    return this._value;
   }
 
   get next() {
     return this._next;
   }
+
+  set next(next) {
+    this._next = next;
+  }
 }
 
 export class List {
-  constructor() {
+  constructor(arr) {
     this._length = 0;
     this._head = null;
-  }
 
-  add(nextValue) {
-    throw new Error('Remove this statement and implement this function');
+    if (Array.isArray(arr) && arr.length > 0) {
+      this._head = new Element(arr[arr.length - 1]);
+      let current = this._head;
+      for (let i = arr.length - 2; i >= 0; i--) {
+        current.next = new Element(arr[i]);
+        current = current.next;
+      }
+      this._length = arr.length;
+    }
+  }
+  add(element) {
+    //first check if the head is null
+    if (this._head === null) {
+      this._head = element;
+    } else {
+      element._next = this._head;
+      this._head = element;
+    }
+  
+    this._length++;
   }
 
   get length() {
-    throw new Error('Remove this statement and implement this function');
+    return this._length;
   }
 
   get head() {
-    throw new Error('Remove this statement and implement this function');
+    return this._head;
   }
 
   toArray() {
-    throw new Error('Remove this statement and implement this function');
+    let arr = [];
+    let current = this._head;
+    while (current !== null) {
+      arr.push(current.value);
+      current = current.next;
+    }
+    return arr;
   }
 
   reverse() {
-    throw new Error('Remove this statement and implement this function');
+    let current = this._head;
+    let previous = null;
+    while (current !== null) {
+      let next = current.next;
+      current.next = previous;
+      previous = current;
+      current = next;
+    }
+    this._head = previous;
+    return this;
   }
 }
