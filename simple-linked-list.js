@@ -44,6 +44,17 @@ export class List {
     this._length++;
   }
 
+//function addAfter ( 2 parameters newNumber, target number)
+// make sure that there is target number 
+// traverse to the target number 
+//make the new element node
+//change the pointer for the target number to point to new element node
+//if theres an element after the new node point to that
+//if not make null 
+addAfter(newNumber, targetNumber){
+if ()
+}
+
   get length() {
     return this._length;
   }

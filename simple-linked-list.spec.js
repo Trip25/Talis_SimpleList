@@ -128,4 +128,10 @@ describe('Lists with multiple elements', () => {
       10, 9, 8, 7, 6, 5, 4, 3, 2, 1,
     ]);
   });
+  // added in talis interview
+  test('can add element after existing one', () => {
+    const threeList = new List([1, 2, 3]);
+    expect(threeList.addAfter(4, 2).toArray()).toEqual([1, 2, 4, 3]);
+  });
+
 });
